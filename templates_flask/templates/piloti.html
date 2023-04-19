@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Piloti</title>
+</head>
+<body>
+    <img src="../static/images/1.jpg" alt="1" width="400">
+    {% for item in units %}
+        <p>
+            Unit name: {{ item[0] }}
+        </p>
+        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+    {% endfor %}
+</body>
+</html>
