@@ -4,12 +4,12 @@
     <title>Piloti</title>
 </head>
 <body>
-    <img src="../static/images/1.jpg" alt="1" width="400">
+    <img src="../static/images/1.jpg" alt="Hamilton" width="400">
     {% for item in units %}
         <p>
-            Unit name: {{ item[0] }}
+            surename name: {{ item[5] }}
         </p>
-        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[0]}}" width="200">
+        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[5]}}" width="400">
     {% endfor %}
 </body>
 </html>

@@ -15,11 +15,11 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    return render_template('hello.html', name='Elisa')
+    return render_template('hello.html')
 
 
-@app.route('/units')
+@app.route('/piloti')
 def unitList():
         mycursor.execute("SELECT * FROM piloti")
         myresult = mycursor.fetchall()
-        return render_template('piloti.html', units=myresult)
+        return render_template('piloti.html', surname=myresult)
