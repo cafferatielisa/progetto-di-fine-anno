@@ -22,7 +22,7 @@ mycursor.execute("""
     forename VARCHAR(30),
     surname VARCHAR(30),
     dob INTEGER,
-    nationality VARCHAR(30),
+    nationality VARCHAR(30)
   );""")
 
 
