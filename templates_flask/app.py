@@ -19,7 +19,7 @@ def hello():
 
 
 @app.route('/piloti')
-def unitList():
+def pilotiList():
         mycursor.execute("SELECT * FROM piloti")
         myresult = mycursor.fetchall()
-        return render_template('piloti.html', surname=myresult)
+        return render_template('piloti.html', surename=myresult)

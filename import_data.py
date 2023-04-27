@@ -9,43 +9,43 @@ mydb = mysql.connector.connect(
 )
 mycursor = mydb.cursor()
 
-#Create the DB (if not already exists)
 mycursor.execute("CREATE DATABASE IF NOT EXISTS FORMULA1")
 
-#Create the table for the csv data (if not exists)
+
 mycursor.execute("""
-  CREATE TABLE IF NOT EXISTS FORMULA1.piloti (
+  CREATE TABLE IF NOT EXISTS FORMULA1.piloti2 (
     driverId INTEGER,
     driverRef VARCHAR(30) NOT NULL,
     number INTEGER,
     code VARCHAR(30),
     forename VARCHAR(30),
     surname VARCHAR(30),
-    dob INTEGER,
+    dob DATE,
     nationality VARCHAR(30)
   );""")
 
 
-mycursor.execute("DELETE FROM FORMULA1.piloti")
+mycursor.execute("DELETE FROM FORMULA1.piloti2")
 mydb.commit()
 
 #Read data from a csv file
 formula_data = pd.read_csv('./drivers.csv', index_col=False, delimiter = ',')
 formula_data = formula_data.fillna('Null')
+formula_data.drop(formula_data.columns[len(formula_data.columns)-1], axis=1, inplace=True)
 print(formula_data.head(20))
 
-#Fill the table
+
 for i,row in formula_data.iterrows():
     cursor = mydb.cursor()
     #here %S means string values 
-    sql = "INSERT INTO FORMULA1.piloti VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO FORMULA1.piloti2 VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
     cursor.execute(sql, tuple(row))
     print("Record inserted")
     # the connection is not auto committed by default, so we must commit to save our changes
     mydb.commit()
 
-#Check if the table has been filled
-mycursor.execute("SELECT * FROM FORMULA1.piloti")
+
+mycursor.execute("SELECT * FROM FORMULA1.piloti2")
 myresult = mycursor.fetchall()
 
 for x in myresult:
