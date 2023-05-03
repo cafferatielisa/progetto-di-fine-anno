@@ -11,12 +11,13 @@ mycursor = mydb.cursor()
 
 mycursor.execute("CREATE DATABASE IF NOT EXISTS FORMULA1")
 
+mycursor.execute("DROP TABLE FORMULA1.piloti")
 
 mycursor.execute("""
-  CREATE TABLE IF NOT EXISTS FORMULA1.piloti2 (
+  CREATE TABLE IF NOT EXISTS FORMULA1.piloti (
     driverId INTEGER,
     driverRef VARCHAR(30) NOT NULL,
-    number INTEGER,
+    number VARCHAR(30),
     code VARCHAR(30),
     forename VARCHAR(30),
     surname VARCHAR(30),
@@ -25,7 +26,7 @@ mycursor.execute("""
   );""")
 
 
-mycursor.execute("DELETE FROM FORMULA1.piloti2")
+mycursor.execute("DELETE FROM FORMULA1.piloti")
 mydb.commit()
 
 #Read data from a csv file
@@ -38,14 +39,14 @@ print(formula_data.head(20))
 for i,row in formula_data.iterrows():
     cursor = mydb.cursor()
     #here %S means string values 
-    sql = "INSERT INTO FORMULA1.piloti2 VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
+    sql = "INSERT INTO FORMULA1.piloti VALUES (%s,%s,%s,%s,%s,%s,%s,%s)"
     cursor.execute(sql, tuple(row))
     print("Record inserted")
     # the connection is not auto committed by default, so we must commit to save our changes
     mydb.commit()
 
 
-mycursor.execute("SELECT * FROM FORMULA1.piloti2")
+mycursor.execute("SELECT * FROM FORMULA1.piloti")
 myresult = mycursor.fetchall()
 
 for x in myresult:
