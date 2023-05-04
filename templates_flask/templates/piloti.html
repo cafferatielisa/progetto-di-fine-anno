@@ -8,10 +8,13 @@
     
     {% for pilota in table_list %}
         <p>
-            nome: {{pilota[4]}}
+            Name: {{pilota[4]}}
         </p>
         <p>
-            cognome: {{ pilota[5] }}
+            Surename: {{ pilota[5] }}
+        </p>
+        <p>
+            Nazionality: {{ pilota[7] }}
         </p>
         <img src="../static/images/{{pilota[0]}}.jpg" alt="{{pilota[5]}}" width="400">
 
