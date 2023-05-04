@@ -22,4 +22,4 @@ def hello():
 def pilotiList():
         mycursor.execute("SELECT * FROM piloti")
         myresult = mycursor.fetchall()
-        return render_template('piloti.html', surename=myresult)
+        return render_template('piloti.html', table_list=myresult)

@@ -4,13 +4,20 @@
     <title>Piloti</title>
 </head>
 <body>
-    <img src="../static/images/logof1.jpg" alt="Cognomi piloti" width="400">
-    {{surname}}
-    {% for item in surename %}
+    <img src="../static/images/logof1.jpg" alt="Formula1" width="400">
+    
+    {% for pilota in table_list %}
         <p>
-            surename piloti: {{ item[5] }}
+            nome: {{pilota[4]}}
         </p>
-        <img src="../static/images/{{item[0]}}.jpg" alt="{{item[5]}}" width="400">
+        <p>
+            cognome: {{ pilota[5] }}
+        </p>
+        <img src="../static/images/{{pilota[0]}}.jpg" alt="{{pilota[5]}}" width="400">
+
+        
     {% endfor %}
+
+   
 </body>
 </html>
