@@ -2,23 +2,23 @@
 <html lang="en">
 <head>
     <title>Piloti</title>
+    <link rel="stylesheet" href="../static/css/style.css" />
 </head>
 <body>
+    <h1>Titti i piloti di F1 della storia</h1>
+        <hr>
+
     <img src="../static/images/logof1.jpg" alt="Formula1" width="400">
     
     {% for pilota in table_list %}
-        <p>
-            Name: {{pilota[4]}}
-        </p>
-        <p>
-            Surename: {{ pilota[5] }}
-        </p>
-        <p>
-            Nazionality: {{ pilota[7] }}
-        </p>
+    <section class="nome">
+        <p>{{pilota[4]}}  {{ pilota[5] }}</p>
+    </section>
+    <section class="generalita">
+        <p>  Nazionality: {{ pilota[7] }}  </p>
+    </section>
         <img src="../static/images/{{pilota[0]}}.jpg" alt="{{pilota[5]}}" width="400">
-
-        
+    
     {% endfor %}
 
    

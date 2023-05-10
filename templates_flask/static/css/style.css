@@ -1,0 +1,25 @@
+.generalita{
+    display: flex;
+    justify-content: left;
+    color:rgb(0, 0, 0);
+}
+
+.nome{
+    display: flex;
+    justify-content: left;
+    color:rgb(0, 0, 0);
+}
+
+body {
+    color: rgba(0,0,0,.87);
+    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    font-size: 0.8125rem;
+    font-weight: 400;
+    line-height: 1.25rem;
+    margin: 5;
+    min-width: 18.75rem;
+}
+
+img{
+    border-radius: 10%;
+}

@@ -18,7 +18,7 @@ def hello():
     return render_template('hello.html')
 
 
-@app.route('/piloti')
+@app.route('/tuttipiloti')
 def pilotiList():
         mycursor.execute("SELECT * FROM piloti")
         myresult = mycursor.fetchall()
