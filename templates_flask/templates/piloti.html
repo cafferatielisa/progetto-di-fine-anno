@@ -5,11 +5,12 @@
     <link rel="stylesheet" href="../static/css/style.css" />
 </head>
 <body>
-    <h1>Titti i piloti di F1 della storia</h1>
+
+    <h1>Tutti i piloti di F1 della storia</h1>
         <hr>
 
     <img src="../static/images/logof1.jpg" alt="Formula1" width="400">
-    
+<section class="container">    
     {% for pilota in table_list %}
     <section class="nome">
         <p>{{pilota[4]}}  {{ pilota[5] }}</p>
@@ -21,6 +22,6 @@
     
     {% endfor %}
 
-   
+</section>
 </body>
 </html>
