@@ -1,18 +1,6 @@
-.generalita{
-    display: flex;
-    justify-content: left;
-    color:rgb(0, 0, 0);
-}
-
-.nome{
-    display: flex;
-    justify-content: left;
-    color:rgb(0, 0, 0);
-}
-
 body {
     color: rgba(0,0,0,.87);
-    font-family: "Roboto",Helvetica,Arial,sans-serif;
+    font-family: "Roboto";
     font-size: 0.8125rem;
     font-weight: 400;
     line-height: 1.25rem;
@@ -20,13 +8,33 @@ body {
     min-width: 18.75rem;
 }
 
+hr{
+    color: rgb(202, 6, 6);
+}
+
 img{
     border-radius: 10%;
 }
 
-.container {
+.navigazione{
+    color: rgb(0, 0, 0);
+    font-family: "Roboto";
+    background-color: rgb(202, 6, 6);
+    align-items:center;
+}
+
+
+
+.flex-container {
     display: flex;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: flex-start;
+    background-color: rgb(255, 255, 255);
+    flex-direction: row;
+}
+
+.flex-container > div {
+    background-color: #c9c9c9;
+    text-align: center;
+    line-height: 75px;
+    font-size: 20px;
 }
