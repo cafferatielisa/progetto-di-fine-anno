@@ -7,21 +7,23 @@
 <body>
     <img src="../static/images/logof1.jpg" alt="Formula1" width="300">
       <hr>
-    <div class="navigazione">
-      <a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu97.gitpod.io/">Home</a>
-      <a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu97.gitpod.io/tuttipiloti">Piloti</a>
-      <a href="#">Stagione</a>
-      <a href="#">Circuiti</a>
-      <a href="#">Scuderie</a>
-    </div>
+  <div class="navigazione">
+  <ul>
+    <li><div><a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu97.gitpod.io/">Home</a></li>
+    <li><a class="active" href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu97.gitpod.io/tuttipiloti">Piloti</a></li>
+    <li><a href="#">Stagione</a></li>
+    <li><a href="#">Circuiti</a></li>
+    <li><a href="#">Scuderie</a></div></li>
+  </ul>
+  </div>
     <hr>
     <h1>Tutti i piloti di F1 della storia</h1>
 </section>
 <div class="flex-container">
     {% for pilota in table_list %}
-        <div><img src="../static/images/{{pilota[0]}}.jpg" alt="{{pilota[5]}}" width="400" style="width:100%"></div>
-        <div><p>{{pilota[4]}}  {{ pilota[5] }}</p></div>  
-        <div><p>Nazionality: {{ pilota[7] }}</p></div>
+        <div><img src="../static/images/{{pilota[0]}}.jpg" alt="{{pilota[5]}}" width="400" style="width:100%">
+        <p>{{pilota[4]}}  {{ pilota[5] }}</p>
+        <p>Nazionality: {{ pilota[7] }}</p></div>
     {% endfor %}
 </div>
 </body>
