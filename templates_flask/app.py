@@ -23,3 +23,22 @@ def pilotiList():
         mycursor.execute("SELECT * FROM piloti")
         myresult = mycursor.fetchall()
         return render_template('piloti.html', table_list=myresult)
+
+
+@app.route('/circuiti')
+def circuitiList():
+        mycursor.execute("SELECT * FROM circuits")
+        myresult = mycursor.fetchall()
+        return render_template('circuits.html', table_list=myresult)
+
+@app.route('/scuderie')
+def scuderieList():
+        mycursor.execute("SELECT * FROM constructors")
+        myresult = mycursor.fetchall()
+        return render_template('constructors.html', table_list=myresult)
+
+@app.route('/stagioni')
+def stagioniList():
+        mycursor.execute("SELECT * FROM seasons")
+        myresult = mycursor.fetchall()
+        return render_template('seasons.html', table_list=myresult)

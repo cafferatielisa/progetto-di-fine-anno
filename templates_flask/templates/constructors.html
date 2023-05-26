@@ -17,15 +17,14 @@
   </ul>
   </div>
     <hr>
-    <h1>Tutti i piloti di F1 della storia</h1>
+    <h1>Tutte le scuderia di F1 della storia</h1>
 </section>
 <div class="flex-container">
-    {% for pilota in table_list %}
-        <div><img src="../static/images/{{pilota[0]}}.jpg" alt="{{pilota[5]}}" width="400" style="width:100%">
-        <p>{{pilota[4]}}  {{ pilota[5] }}</p>
-        <p>Nazionality: {{ pilota[7] }}</p></div>
+    {% for scuderia in table_list %}
+        <div>
+        <p>{{scuderia[3]}} </p>
+        <p>Name: {{ scuderia[2] }}</p></div>
     {% endfor %}
 </div>
 </body>
 </html>
-
