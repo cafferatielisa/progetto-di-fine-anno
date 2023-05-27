@@ -39,6 +39,6 @@ def scuderieList():
 
 @app.route('/stagioni')
 def stagioniList():
-        mycursor.execute("SELECT * FROM seasons")
+        mycursor.execute("SELECT * FROM stagioni")
         myresult = mycursor.fetchall()
         return render_template('seasons.html', table_list=myresult)
