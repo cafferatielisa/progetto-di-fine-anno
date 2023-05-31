@@ -7,23 +7,22 @@
 <body>
     <img src="../static/images/logof1.jpg" alt="Formula1" width="300">
       <hr>
-  <div class="navigazione">
-  <ul>
-    <li><div><a  href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/">Home</a></li>
-    <li><a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/tuttipiloti">Piloti</a></li>
-    <li><a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/stagioni">Stagione</a></li>
-    <li><a  href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/circuiti">Circuiti</a></li>
-    <li><a class="active" href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/scuderie">Scuderie</a></div></li>
-  </ul>
-  </div>
+      <div class="navigazione">
+  
+        <span><a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/">Home</a></span>
+        <span><a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/tuttipiloti">Piloti</a></span>
+        <span><a  href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/stagioni">Stagione</a></span>
+        <span><a href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/circuiti">Circuiti</a></span>
+        <span><a class="active" href="https://5000-cafferatiel-progettodif-kpgfkokndxm.ws-eu98.gitpod.io/scuderie">Scuderie</a></span>
+</div>
     <hr>
     <h1>Tutte le scuderia di F1 della storia</h1>
 </section>
 <div class="flex-container">
     {% for scuderia in table_list %}
-        <div>
-        <p>{{scuderia[3]}} </p>
-        <p>Name: {{ scuderia[2] }}</p></div>
+        <div><img src="../static/images/scuderie/{{scuderia[0]}}.jpg" alt="{{scuderia[2]}}" width="400" style="width:100%">
+        <p>Name: {{ scuderia[2] }}</p>
+        <p>Nationality: {{scuderia[3]}} </p></div>
     {% endfor %}
 </div>
 </body>
