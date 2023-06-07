@@ -17,6 +17,16 @@ img{
     align-items: center;
 }
 
+.navigazione > div{
+    color: rgba(0,0,0,.87);
+    font-family: "Roboto";
+    font-size: 0.8125rem;
+    font-weight: 400;
+    background-color: rgb(202, 6, 6);
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .navigazione {
     color: rgba(0,0,0,.87);
     font-family: "Roboto";
@@ -25,29 +35,32 @@ img{
     background-color: rgb(202, 6, 6);
     align-items:center;
     width: 100%;
+    margin: 10px;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
   }
-
-span {
-    align-items:center;
-    display: inline;
-    width: 100px;
-    padding: 50px;
+  
+li {
+    float: left;
+}
+  
+span a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
 }
 
 .active {
     background-color: #000000;
     color: rgb(255, 0, 0);
     width: 100px;
-    padding: 50px;
-    align-items:center;
-    display: inline;
-  }
+    padding: 22px;
+}
 
 .flex-container {
     display: flex;
